@@ -1,0 +1,10 @@
+[toolchain]
+channel = "nightly"
+
+[programs.localnet]
+claw_royale = "5B9rGKGUNvBquNAVqSeEsZmkLrvXEZDEtDU5qAV1JZSW"
+token_management = "HsaRwE8xHDDHaFsM55G4fYZyCRXEK4rupXgcBp3TtGtf"
+
+[provider]
+cluster = "devnet"
+wallet = "/home/openclaw/.config/solana/devnet.json"

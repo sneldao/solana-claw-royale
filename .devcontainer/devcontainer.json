@@ -1,0 +1,13 @@
+{
+  "name": "Solana Anchor Dev",
+  "image": "mcr.microsoft.com/devcontainers/rust:1.75",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "postCreateCommand": "cargo install --git https://github.com/coral-xyz/anchor --tag v0.30.1 --locked",
+  "remoteUser": "root",
+  "extensions": [
+    "rust-lang.rust-analyzer",
+    "solana.solana"
+  ]
+}

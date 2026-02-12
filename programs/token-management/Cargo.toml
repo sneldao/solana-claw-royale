@@ -1,0 +1,28 @@
+[package]
+name = "token-management"
+version = "0.1.0"
+description = "Token Management for Claw Royale - USDC minting and prize distribution"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "token_management"
+path = "src"
+
+[features]
+default = []
+test = []
+
+[dependencies]
+anchor-lang = "0.30.1"
+anchor-spl = "0.30.1"
+solana-program = "1.18.18"
+
+[dev-dependencies]
+anchor-lang = { version = "0.30.1", features = ["idl-build"] }
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"

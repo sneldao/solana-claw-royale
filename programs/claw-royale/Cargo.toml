@@ -1,0 +1,37 @@
+[package]
+name = "claw_royale"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+seeds = []
+default = []
+skip-lint = []
+allow-mutable = []
+
+[dependencies]
+anchor-lang = "0.30.1"
+anchor-spl = "0.30.1"
+solana-program = "1.18.18"
+
+[dev-dependencies]
+anchor-lang = { version = "0.30.1", features = ["init-if-needed"] }
+
+[lib]
+name = "claw_royale"
+crate-type = ["cdylib", "lib"]
+path = "src/lib.rs"
+
+[profile.release]
+codegen-units = 1
+incremental = false
+overflow-checks = true
+lto = true
+strip = true
+
+[profile.release.build-sbf]
+opt-level = 3
+incremental = false
+
+[profile.test]
+opt-level = 0

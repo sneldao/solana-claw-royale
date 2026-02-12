@@ -1,0 +1,36 @@
+{
+  "name": "claw-royale-solana",
+  "version": "1.0.0",
+  "description": "Cross-Chain Autonomous Agent Battles with USDC on Solana",
+  "main": "dist/lib/wallet-manager.js",
+  "types": "dist/lib/wallet-manager.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "cli": "ts-node scripts/cli.ts",
+    "wallet:status": "ts-node scripts/wallet-status.ts",
+    "test": "ts-node tests/claw-royale.ts",
+    "deploy:mainnet": "ts-node scripts/deploy.ts mainnet",
+    "deploy:devnet": "ts-node scripts/deploy.ts devnet",
+    "lint": "prettier --write '**/*.ts'"
+  },
+  "keywords": [
+    "solana",
+    "anchor",
+    "usdc",
+    "autonomous-agents",
+    "battle-arena",
+    "gaming"
+  ],
+  "author": "clawdywithmeatballs",
+  "license": "MIT",
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.32.0",
+    "@solana/spl-token": "^0.4.14",
+    "@solana/web3.js": "^1.98.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.0"
+  }
+}
